@@ -4,7 +4,7 @@ import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 
 function Button(){
   return (
-    <TouchableOpacity style={styles.containerButton}>
+    <TouchableOpacity style={styles.containerButton} activeOpacity={0.7}>
       <Text style={styles.text}>Pressione aqui</Text>
     </TouchableOpacity>
   );
@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
+    textAlign: 'center',
+    width: 250,
   },
 });
 
