@@ -9,7 +9,7 @@ export default function App() {
   return (
     <ScrollView ref={scrollViewRef} style={styles.viewScroll}>
       <SafeAreaView style={styles.viewSafeAndroid}>
-        <StatusBar style="dark" />
+        <StatusBar style="light" />
 
         <View style={styles.container1}>
           <Text style={styles.txtTitle}>Checkpoint 1</Text>
@@ -28,6 +28,7 @@ export default function App() {
           <Text style={styles.txtTitle}>Personagem destaque</Text>
           <Image source={require('./assets/tailung.png')} style={styles.img} />
           <Text style={styles.txtSubtitle}>Tai Lung é o vilão central do filme "Kung Fu Panda", um leopardo da neve poderoso e carismático que representa uma ameaça iminente ao Vale da Paz. Como um antigo pupilo do Mestre Shifu, ele era considerado o candidato perfeito para se tornar o lendário Dragão Guerreiro. No entanto, após anos de treinamento e expectativas, Tai Lung se tornou consumido pela ambição e desejo de poder, o que o levou a ser banido do Vale da Paz após tentar roubar o pergaminho do Dragão Guerreiro.</Text>
+          
           <Text style={styles.txtSubtitle}>Tai Lung é um personagem destacado por sua habilidade incrível em artes marciais, sua força formidável e sua determinação inabalável em conquistar o que deseja. Sua presença imponente e sua personalidade carismática o tornam uma figura memorável no filme. Ele é retratado como um adversário formidável para Po e os Cinco Furiosos, representando não apenas uma ameaça física, mas também um desafio para o próprio conceito de heroísmo e determinação.</Text>
         </View>
 
@@ -45,13 +46,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   container2: {
-    paddingTop: 20
+    paddingTop: 20,
+    alignItems: 'center',
   },
   viewSafeAndroid: {
     flex: 1,
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     padding: 20,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   viewScroll: {
     backgroundColor: '#0F172A',
@@ -59,17 +61,16 @@ const styles = StyleSheet.create({
   txtSubtitle: {
     color: '#fff',
     fontSize: 15,
-    paddingBottom: 5
+    paddingBottom: 5,
+    textAlign: 'justify',
+    lineHeight: 22, 
   },
   txtTitle: {
     color: '#fff',
     fontSize: 30,
+    fontWeight: 'bold'
   },
   img: {
-    width: 300,
-    height: 200,
-  },
-  btn: {
     width: 300,
     height: 200,
   }
