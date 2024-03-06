@@ -28,6 +28,9 @@ export default function App() {
           <Text style={styles.txtSubtitle}>Tai Lung é um personagem destacado por sua habilidade incrível em artes marciais, sua força formidável e sua determinação inabalável em conquistar o que deseja. Sua presença imponente e sua personalidade carismática o tornam uma figura memorável no filme. Ele é retratado como um adversário formidável para Po e os Cinco Furiosos, representando não apenas uma ameaça física, mas também um desafio para o próprio conceito de heroísmo e determinação.</Text>
         </View>
 
+        <View style={styles.container3}>
+          <Button/>
+        </View>
       </SafeAreaView>
     </ScrollView>
   );
@@ -60,6 +63,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   img: {
+    width: 300,
+    height: 200,
+  },
+  btn: {
     width: 300,
     height: 200,
   }
