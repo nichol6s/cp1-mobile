@@ -1,10 +1,13 @@
+import { useRef } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView, Image, Platform, ScrollView } from 'react-native';
 import { Button } from './components/button';
 
 export default function App() {
+  const scrollViewRef = useRef(null);
+
   return (
-    <ScrollView style={styles.viewScroll}>
+    <ScrollView ref={scrollViewRef} style={styles.viewScroll}>
       <SafeAreaView style={styles.viewSafeAndroid}>
         <StatusBar style="dark" />
 
@@ -28,8 +31,8 @@ export default function App() {
           <Text style={styles.txtSubtitle}>Tai Lung é um personagem destacado por sua habilidade incrível em artes marciais, sua força formidável e sua determinação inabalável em conquistar o que deseja. Sua presença imponente e sua personalidade carismática o tornam uma figura memorável no filme. Ele é retratado como um adversário formidável para Po e os Cinco Furiosos, representando não apenas uma ameaça física, mas também um desafio para o próprio conceito de heroísmo e determinação.</Text>
         </View>
 
-        <View style={styles.container3}>
-          <Button/>
+        <View style={styles.container2}>
+          <Button scrollViewRef={scrollViewRef} />
         </View>
       </SafeAreaView>
     </ScrollView>

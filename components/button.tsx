@@ -1,10 +1,14 @@
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { TouchableOpacity, StyleSheet, Text} from 'react-native';
 
 
-function Button(){
+function Button({ scrollViewRef }){
+    const handlePress = () => {
+        scrollViewRef.current.scrollTo({ y: 0, animated: true });
+    };
+
   return (
-    <TouchableOpacity style={styles.containerButton} activeOpacity={0.7}>
+    <TouchableOpacity style={styles.containerButton} activeOpacity={0.7} onPress={handlePress} >
       <Text style={styles.text}>Pressione aqui</Text>
     </TouchableOpacity>
   );
